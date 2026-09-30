@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   say_hello_world:
+    runs-on: ubuntu-24.04
     steps:
       - name : Afficher Hello World
-      run: echo "Hello World"
+        run: echo "Hello World"
