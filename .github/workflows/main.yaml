@@ -2,9 +2,18 @@ name: Hello World Workflow
 
 on: [push]
 
+env:
+  - template: .env
+
 jobs:
   say_hello_world:
     runs-on: ubuntu-24.04
     steps:
       - name : Afficher Hello World
         run: echo "Hello World"
+
+  say_name:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Prénom
+        run: echo $PRENOM
