@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Prénom
-        run: echo "{{$PRENOM}}"
+        run: echo "${{var.PRENOM}}"
