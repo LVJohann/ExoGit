@@ -1,9 +1,9 @@
 name: Hello World Workflow
 
-stages:
-  - stage: Hello_World
-  jobs:
-    - job:
-      steps:
-        - script: echo "Hello World"
+on: [push]
 
+jobs:
+  say_hello_world:
+    steps:
+      - name : Afficher Hello World
+      run: echo "Hello World"
