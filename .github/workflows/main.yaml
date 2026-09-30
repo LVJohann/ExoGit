@@ -1,0 +1,9 @@
+name: Hello World Workflow
+
+stages:
+  - stage: Hello_World
+  jobs:
+    - job:
+      steps:
+        - script: echo "Hello World"
+
