@@ -1,6 +1,6 @@
 name: Commit Checkout Workflow
 
-on: [commit]
+on: [push]
 
 jobs:
   check_commit:
