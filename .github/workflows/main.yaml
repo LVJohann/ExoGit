@@ -26,3 +26,10 @@ jobs:
     steps:
       - name: Email
         run: echo "${{vars.EMAIL}}"
+
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      -uses: actions /checkout@4
+      -name: lint
+      run: npx --yes htmlhint index.html
