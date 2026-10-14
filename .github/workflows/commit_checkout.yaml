@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Commit Success
-        run: python3 ./commit_checkout.py
+        run: cwd
