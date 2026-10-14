@@ -1,0 +1,10 @@
+name: Commit Checkout Workflow
+
+on: [commit]
+
+jobs:
+  check_commit:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Commit Success
+        run: python3 commit_checkout.py
