@@ -1,6 +1,10 @@
 name: Web deployment
 
-on: [push]
+on:   
+  push:
+    branches: [ gh-pages ] # Specify branches to trigger on
+
+
 
 jobs:
   # Build job
