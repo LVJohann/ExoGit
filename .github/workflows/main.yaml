@@ -14,3 +14,15 @@ jobs:
     steps:
       - name: Prénom
         run: echo "${{vars.PRENOM}}"
+
+  say_family_name:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Nom de famille
+        run: echo "${{vars.NOM}}"
+
+  say_email:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Email
+        run: echo "${{vars.EMAIL}}"
