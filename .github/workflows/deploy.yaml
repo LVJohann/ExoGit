@@ -7,6 +7,19 @@ on:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: extract docker image file
+      - uses: shrink/actions-docker-extract@v4
+        with:
+          image: "${{ vars.DOCKERHUB_USERNAME }}/exo-git"
+          path: "/usr/share/nginx/html/index.html"
+
+  # Deploy job
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
       pages: write      # to deploy to Pages
@@ -17,15 +30,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
+    # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
-      - name: extract docker image file
-      - uses: shrink/actions-docker-extract@v4
-        with:
-          image: "${{ vars.DOCKERHUB_USERNAME }}/exo-git"
-          path: "/usr/share/nginx/html/index.html"
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
-
