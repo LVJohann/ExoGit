@@ -9,7 +9,6 @@ jobs:
       step:
         - name : Build Dockerfile
           run: docker run -d -p 8080:80 exo-git
-      
-      step:
+
         - name : Push Dockerfile
           run : docker push johannlevivalensi/exo-git:exo-git
