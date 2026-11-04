@@ -6,8 +6,10 @@ jobs:
   build-push-dockerfile:
     runs-on: ubuntu-24.04
     steps:
-      - name : Build Dockerfile
-        run: docker run -d -p 8080:80 exo-git
-
-      -name : Push Dockerfile
-        run : docker push johannlevivalensi/exo-git:exo-git
+      step:
+        - name : Build Dockerfile
+          run: docker run -d -p 8080:80 exo-git
+      
+      step:
+        - name : Push Dockerfile
+          run : docker push johannlevivalensi/exo-git:exo-git
