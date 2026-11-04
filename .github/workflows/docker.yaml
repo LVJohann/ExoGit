@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : Build Dockerfile
-        run: docker run -d -p 8080:80 exo-git
+        run: docker build -t exo-git
 
       - name : Push Dockerfile
         run : docker push johannlevivalensi/exo-git:exo-git
