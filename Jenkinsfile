@@ -9,7 +9,7 @@ pipeline {
 			steps {sh 'echo "Hello World !"'}
 		}
 		stage("Failed") {
-			steps {sh 'akdfniezrjinfgezr'}
+			steps {sh 'echo AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'}
 		}
 	}
 }
